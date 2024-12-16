@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <main>
+            <h1>Survey Form</h1>
+            <h4>Thank you for taking our survey. Please answer the following questions based on whether you liked our services.</h4>
+
+            <form id="survey-form">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="Age">
+                    <h4>What is your age?</h4>
+                    <input type="number" id="age" class="form-control" min="13" max="120" required>
+                    
+                </div>
+                <div class="email">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <h4>Would you recommend us to a friend?</h4>
+                <div class="recommendation">
+                    <label for="recommend-yes">Yes</label>
+                    <input type="radio" id="recommend-yes" name="recommendation" value="yes" required>
+    
+                    <label for="recommend-no">No</label>
+                    <input type="radio" id="recommend-no" name="recommendation" value="no" required>
+    
+                    <label for="recommend-maybe">Maybe</label>
+                    <input type="radio" id="recommend-maybe" name="recommendation" value="maybe" required>
+                </div>
+                <p></p>
+                <div class="source">
+                    <label for="source">How did you hear about us?</label>
+                    <select id="source" class="form-control" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="friend">Friend</option>
+                        <option value="social_media">Social Media</option>
+                        <option value="search_engine">Search Engine</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <p></p>
+                <div class="Submit">
+                    <input type="submit" value="Submit" class="submit-button">
+                </div>
+            </form>
+        </main>
+    </body>
+    <script>
+        document.getElementById('survey-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const email = document.getElementById('email').value;
+            const recommendation = document.querySelector('input[name="recommendation"]:checked').value;
+            const source = document.getElementById('source').value;
+    
+           
+            localStorage.setItem('name', name);
+            localStorage.setItem('age', age);
+            localStorage.setItem('email', email);
+            localStorage.setItem('recommendation', recommendation);
+            localStorage.setItem('source', source);
+    
+            
+            window.location.href = 'success.html';
+        });
+    </script>
+</html>

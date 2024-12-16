@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Modernist";
+    src: url("Font.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Modernist";
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0000003f;
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+
+@keyframes floatIn {
+    0% {
+        transform: translateY(100%); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    width: max(35%, 300px);
+    border-radius: 2rem;
+    padding: 3rem;
+    animation: floatIn 0.5s ease-out; 
+    overflow: visible;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #ffcc00; 
+    margin-bottom: 10px;
+    border-radius: 0rem;
+    border-color: black;
+}
+
+p {
+    line-height: 1.6; 
+    margin-bottom: 15px;
+}
+
+a {
+    color: #00ccff;
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+button {
+    background-color: #ffcc00; 
+    color: black; 
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+button:hover {
+    background-color: #e6b800; 
+}
+
+
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    max-width: 500px;
+    margin: auto; 
+}
+input[type="text"],
+input[type="email"],
+input[type="radio"],
+textarea,
+input[type="number"] { 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    transition: border-color 0.3s; 
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+input[type="number"]:focus { 
+    border-color: #00ccff; 
+    outline: none; 
+}
+input[type="submit"] {
+    border: none;
+    display: block; 
+    margin: 0 auto; 
+    background-color: #00000038;
+    font-family: "Modernist";
+    padding: 12px 20px; 
+    border-radius: 5px; 
+    color: white; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+input[type="submit"]:hover {
+    background-color: #00ccff; 
+    transform: scale(1.05); 
+}
+input[type="radio"] {
+    display: none; 
+}
+
+label {
+    display: inline-block; 
+    margin-right: 15px; 
+    padding: 10px 15px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+input[type="radio"]:checked + label {
+    background-color: #86f380; 
+    color: white; 
+    }
+li {
+color:black;
+;}
+li:hover {
+    color: #e6b800;
+    border-color:#333;
+    cursor: pointer;
+}
+
+.source {
+    margin: 20px 0; 
+}
+
+.source label {
+    font-weight: bold; 
+    display: block; 
+    margin-bottom: 5px; 
+    color: #ffcc00; 
+}
+
+select {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    transition: border-color 0.3s; 
+}
+
+select:focus {
+    border-color: #00ccff; 
+}

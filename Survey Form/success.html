@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Success</title>
+</head>
+<body>
+    <main>
+        <h1>Thank You for Your Submission!</h1>
+        <h2>Your Responses:</h2>
+        
+        <ul>
+            <li><strong>Name:</strong> <span id="display-name"></span></li>
+            <li><strong>Age:</strong> <span id="display-age"></span></li>
+            <li><strong>Email:</strong> <span id="display-email"></span></li>
+            <li><strong>Recommendation:</strong> <span id="display-recommendation"></span></li>
+            <li><strong>Source:</strong> <span id="display-source"></span></li>
+        </ul>
+
+    <script>
+        document.getElementById('display-name').textContent = localStorage.getItem('name');
+        document.getElementById('display-age').textContent = localStorage.getItem('age');
+        document.getElementById('display-email').textContent = localStorage.getItem('email');
+        document.getElementById('display-recommendation').textContent = localStorage.getItem('recommendation');
+        document.getElementById('display-source').textContent = localStorage.getItem('source');
+
+    </script>
+    </main>
+</body>
+</html>
